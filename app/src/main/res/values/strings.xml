@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Screen Splash With Login</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_email">Email</string>
+    <string name="cities">Cities</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+</resources>
