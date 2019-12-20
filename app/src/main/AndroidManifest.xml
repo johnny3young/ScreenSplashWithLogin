@@ -15,7 +15,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".SecondActivity"/>
         <activity android:name=".ThirdActivity"
-            android:theme="@style/AppThemeOtherActivity"/>
+            android:theme="@style/AppThemeSplashScreen"/>
 
         <activity android:name=".LoginActivity"/>
         <activity android:name=".IntroActivity">

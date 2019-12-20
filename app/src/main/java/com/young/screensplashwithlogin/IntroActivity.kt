@@ -1,11 +1,14 @@
 package com.young.screensplashwithlogin
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import java.util.*
+import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 
 class IntroActivity : AppCompatActivity() {
+
+    private val splashTime = 3000L
+    private lateinit var myHandler: Handler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,14 +16,18 @@ class IntroActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+        myHandler = Handler()
 
-        //TODO hacer este TIMER una función para invocarla y dejar mas limpio el código
-        Timer().schedule(object : TimerTask() {
-            override fun run() {
-                startActivity(Intent(this@IntroActivity, MainActivity::class.java))
-                finish()
-            }
-        }, 5000) //5 seconds for pass to the Main Activity
-
+        myHandler.postDelayed({
+            goToMainActivity()
+        }, splashTime)
     }
+
+    private fun goToMainActivity() {
+
+        val mainActivityIntent = Intent(applicationContext, MainActivity::class.java)
+        startActivity(mainActivityIntent)
+        finish()
+    }
+
 }
