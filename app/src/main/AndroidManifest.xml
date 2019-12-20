@@ -15,10 +15,11 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".SecondActivity"/>
         <activity android:name=".ThirdActivity"
-            android:theme="@style/AppThemeSplashScreen"/>
+            android:theme="@style/AppTheme.OtherActivity"/>
 
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".IntroActivity">
+        <activity android:name=".IntroActivity"
+            android:theme="@style/AppTheme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
